@@ -12,11 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        PlayerFall();
-    }
-
-    private void FixedUpdate()
-    {
+        CapSpeed();
         PlayerInput();
     }
 
@@ -24,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
     {
         float xPos = transform.position.x;
         float yPos = transform.position.y;
-        if (Input.GetKey(KeyCode.A)) transform.position = new Vector2(xPos - strafeSpeed, yPos);
-        if (Input.GetKey(KeyCode.D)) transform.position = new Vector2(xPos + strafeSpeed, yPos);
+        if (Input.GetKey(KeyCode.A)) transform.position = new Vector2(xPos - strafeSpeed * Time.deltaTime, yPos);
+        if (Input.GetKey(KeyCode.D)) transform.position = new Vector2(xPos + strafeSpeed * Time.deltaTime, yPos);
     }
 
-    private void PlayerFall()
+    private void CapSpeed()
     {
-        transform.position = new Vector2(transform.position.x, transform.position.y - fallSpeed * Time.deltaTime);
+        if (rb.velocityY < -fallSpeed) rb.velocityY = -fallSpeed;
     }
 }
