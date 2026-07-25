@@ -6,27 +6,31 @@ public class Grapple : MonoBehaviour
     [SerializeField] LayerMask grappleLayer;
     private bool isGrappling;
     private Vector3 point;
+    private PlayerMovement playerMove;
 
     private void Start()
     {
         lineR = GetComponent<LineRenderer>();
         distanceJ = GetComponent<DistanceJoint2D>();
+        playerMove = GetComponent<PlayerMovement>();
+
         distanceJ.enabled = false;
         lineR.enabled = false;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) Grappling();
+        if (Input.GetMouseButtonDown(0)) StartGrapple();
         if (Input.GetMouseButtonUp(0)) StopGrapple();
         if (isGrappling) UpdateGrapple();
     }
 
-    private void Grappling()
+    private void StartGrapple()
     {
+        playerMove.canMove = false;
         point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (Physics2D.OverlapCircle(point, 0.1f, grappleLayer))
+        Debug.Log(point);
+        if (Physics2D.OverlapCircle(point, 1f, grappleLayer))
         {
             isGrappling = true;
 
@@ -37,6 +41,7 @@ public class Grapple : MonoBehaviour
 
     private void StopGrapple()
     {
+        playerMove.canMove = true;
         lineR.enabled = false;
         distanceJ.enabled = false;
         isGrappling = false;

@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float strafeSpeed = 0.1f;
     [SerializeField] float fallSpeed = 0.5f;
     private Rigidbody2D rb;
+    public bool canMove = true;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerInput()
     {
+        if (!canMove) return; 
         float xPos = transform.position.x;
         float yPos = transform.position.y;
         if (Input.GetKey(KeyCode.A)) transform.position = new Vector2(xPos - strafeSpeed * Time.deltaTime, yPos);
