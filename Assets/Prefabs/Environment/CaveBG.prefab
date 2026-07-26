@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 272903143196790230}
   - component: {fileID: 184812515645188404}
-  - component: {fileID: 3948069021146270569}
   - component: {fileID: 7206728876733460038}
   m_Layer: 0
   m_Name: CaveBG
@@ -86,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3948069021146270569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882687648470081521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6118b9816c7c77d4e9ae3093c731353e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 6882687648470081521}
 --- !u!61 &7206728876733460038
 BoxCollider2D:
   m_ObjectHideFlags: 0
