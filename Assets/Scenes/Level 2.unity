@@ -3858,16 +3858,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c0200ecb689d34f90ded9c1dc6ad92, type: 3}
---- !u!1 &1576646834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2964658948025907411, guid: a2c0200ecb689d34f90ded9c1dc6ad92, type: 3}
-  m_PrefabInstance: {fileID: 1576646833}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1576646835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6594001113243211158, guid: a2c0200ecb689d34f90ded9c1dc6ad92, type: 3}
-  m_PrefabInstance: {fileID: 1576646833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1576646836 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2880925576263622485, guid: a2c0200ecb689d34f90ded9c1dc6ad92, type: 3}
@@ -4420,7 +4410,7 @@ PrefabInstance:
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: winPanel
       value: 
-      objectReference: {fileID: 1576646834}
+      objectReference: {fileID: 0}
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: deathTime
       value: 1
@@ -4436,7 +4426,7 @@ PrefabInstance:
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: deathPanel
       value: 
-      objectReference: {fileID: 1576646835}
+      objectReference: {fileID: 0}
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: startPos.x
       value: -19.6
@@ -4445,6 +4435,10 @@ PrefabInstance:
       propertyPath: startPos.y
       value: 5.9
       objectReference: {fileID: 0}
+    - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
+      propertyPath: fallParticle
+      value: 
+      objectReference: {fileID: 8746203094440197153, guid: 0eb809db5d52cb94a8a5506fa496857d, type: 3}
     - target: {fileID: 6668931866138209744, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: m_Distance
       value: 20.35165

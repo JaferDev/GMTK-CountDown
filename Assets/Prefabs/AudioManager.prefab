@@ -47,12 +47,12 @@ MonoBehaviour:
   sounds:
   - name: FallSound
     clip: {fileID: 8300000, guid: e691b4772d5a4ce4385cb858fc95ed8f, type: 3}
-    volume: 0.7
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Song
     clip: {fileID: 8300000, guid: e5002201ee898054f830cebe970a5b22, type: 3}
-    volume: 1
+    volume: 0.753
     pitch: 1
     source: {fileID: 0}
   - name: Jingle
@@ -72,6 +72,6 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Return
     clip: {fileID: 8300000, guid: 1ac1a0d95c602534297bf1a743a95740, type: 3}
-    volume: 0.7
+    volume: 0.566
     pitch: 1
     source: {fileID: 0}

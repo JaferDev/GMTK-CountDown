@@ -397,11 +397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &150595470 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2964658948025907411, guid: a2c0200ecb689d34f90ded9c1dc6ad92, type: 3}
-  m_PrefabInstance: {fileID: 1645642402181232542}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &156335877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2260,11 +2255,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 272903143196790230, guid: 0e204cbcd0b3936498334c195707a4c4, type: 3}
   m_PrefabInstance: {fileID: 2123560337}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1372047146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6594001113243211158, guid: a2c0200ecb689d34f90ded9c1dc6ad92, type: 3}
-  m_PrefabInstance: {fileID: 1645642402181232542}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383070445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,7 +3198,7 @@ PrefabInstance:
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: winPanel
       value: 
-      objectReference: {fileID: 150595470}
+      objectReference: {fileID: 0}
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: deathTime
       value: 1
@@ -3224,7 +3214,7 @@ PrefabInstance:
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: deathPanel
       value: 
-      objectReference: {fileID: 1372047146}
+      objectReference: {fileID: 0}
     - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: startPos.x
       value: -19.71
@@ -3233,6 +3223,10 @@ PrefabInstance:
       propertyPath: startPos.y
       value: 6.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5273883067967024024, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
+      propertyPath: fallParticle
+      value: 
+      objectReference: {fileID: 8746203094440197153, guid: 0eb809db5d52cb94a8a5506fa496857d, type: 3}
     - target: {fileID: 7554819653292091210, guid: d6a575fab16478b4795d0097fecebf63, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.71
@@ -3390,7 +3384,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2319438084777722082, guid: 805b3fa6c6105584d97c50b961d03be7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9243
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2319438084777722082, guid: 805b3fa6c6105584d97c50b961d03be7, type: 3}
       propertyPath: m_LocalPosition.y

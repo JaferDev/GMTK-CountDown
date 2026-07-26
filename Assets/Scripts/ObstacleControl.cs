@@ -11,6 +11,7 @@ public class ObstacleControl : MonoBehaviour
     [SerializeField] float deathTime = 1;
     [SerializeField] TimeManager timeMgr;
     [SerializeField] int currentLvl;
+    [SerializeField] GameObject fallParticle;
 
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float endTime = 10f;
@@ -53,6 +54,7 @@ public class ObstacleControl : MonoBehaviour
     private void CollisionForce()
     {
         //timeMgr.SlowDown();
+        Instantiate(fallParticle, transform.position, Quaternion.identity);
         FindAnyObjectByType<AudioManager>().PlayOnce("FallSound");
         rb.AddForceY(impactForce, ForceMode2D.Impulse);
     }
