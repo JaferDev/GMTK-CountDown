@@ -1,16 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstacleControl : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] float impactForce = 10f;
-
-    [SerializeField] GameObject deathPanel;
-    [SerializeField] GameObject winPanel;
+    
     [SerializeField] Vector2 startPos;
-    [SerializeField] float deathTime = 2;
+    [SerializeField] float deathTime = 1;
     [SerializeField] TimeManager timeMgr;
+    [SerializeField] int currentLvl;
 
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float endTime = 10f;
@@ -22,9 +22,7 @@ public class ObstacleControl : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        winPanel.SetActive(false);
-        deathPanel.SetActive(false);
-
+        FindAnyObjectByType<AudioManager>().Play("Song");
         startTime = Time.time;
     }
 
@@ -33,6 +31,7 @@ public class ObstacleControl : MonoBehaviour
         DisplayCountdown();
         if (!isReturning) return;
 
+        timerText.text = "...";
         time += Time.unscaledDeltaTime;
         if (time >= deathTime) ReturnByDeath();
     }
@@ -48,17 +47,20 @@ public class ObstacleControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("WinCon")) return;
-        winPanel.SetActive(true);
+        SceneManager.LoadScene(currentLvl + 1);
     }
 
     private void CollisionForce()
     {
         //timeMgr.SlowDown();
+        FindAnyObjectByType<AudioManager>().PlayOnce("FallSound");
         rb.AddForceY(impactForce, ForceMode2D.Impulse);
     }
 
     private void ReturnByDeath()
     {
+        FindAnyObjectByType<AudioManager>().PlayOnce("Return");
+
         //Resetting variables
         time = 0;
         isReturning = false;

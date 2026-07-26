@@ -32,6 +32,7 @@ public class Grapple : MonoBehaviour
         Debug.Log(point);
         if (Physics2D.OverlapCircle(point, 1f, grappleLayer))
         {
+            FindAnyObjectByType<AudioManager>().PlayOnce("Grapple");
             isGrappling = true;
 
             distanceJ.enabled = true;
@@ -41,6 +42,7 @@ public class Grapple : MonoBehaviour
 
     private void StopGrapple()
     {
+        FindAnyObjectByType<AudioManager>().PlayOnce("Grapple");
         playerMove.canMove = true;
         lineR.enabled = false;
         distanceJ.enabled = false;
